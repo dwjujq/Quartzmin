@@ -8,6 +8,7 @@ namespace Quartzmin.AspNetCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddQuartzmin();
+            services.AddControllers().AddNewtonsoftJson 
         }
 
         public void Configure(IApplicationBuilder app)

@@ -71,6 +71,7 @@ namespace Quartz.Plugins.RecentHistory
             {
                 entry.FinishedTimeUtc = DateTime.UtcNow;
                 entry.ExceptionMessage = jobException?.GetBaseException()?.Message;
+                entry.ExceptionDetail = jobException.ToString();
                 await _store.Save(entry);
             }
             if (jobException == null)

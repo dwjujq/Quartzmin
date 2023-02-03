@@ -1,6 +1,4 @@
-﻿#if NETSTANDARD
-
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -69,11 +67,9 @@ namespace Quartzmin
         public static void AddQuartzmin(this IServiceCollection services)
         {
             services.AddMvcCore()
-                .AddApplicationPart(Assembly.GetExecutingAssembly())
-                .AddJsonFormatters();
+                .AddApplicationPart(Assembly.GetExecutingAssembly());
+            
         }
 
     }
 }
-
-#endif
